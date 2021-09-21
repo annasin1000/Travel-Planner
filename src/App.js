@@ -1,5 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+// kod pobierajacy dane z bazy i zapisujacy w konsoli
+const API = "http://localhost:3000";
+
+fetch(`${API}/db`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+//
 
 function App() {
   return (
