@@ -1,0 +1,9 @@
+{
+  "destinations": [
+    {
+      "id": 1 ,
+      "name": "Spain" ,
+      "continent": "Europe"
+    }
+  ]
+}
