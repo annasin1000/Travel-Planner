@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-//import button
-
+import Button from "./Button";
 import {createDestination} from "../api/destinations";
 
 ///onNewDestination????????????
