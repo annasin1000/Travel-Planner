@@ -23,12 +23,13 @@ const API = "http://localhost:3000";
 // Funkcja - przyjmuje pobrane z serwera API dane i zapisywać je w stanie lokalnym,
 //     aby wyrenderować odpowiednie elementy.
 export const getDestination = successCallback => {
-    fetch(`${API}/db`, {
+    fetch(`${API}/destinations`, {
     })
         .then(r => r.json())
         .then(data => {
             if (data.error === false && typeof successCallback === "function") {
-                successCallback(data.data);
+                console.log(data);
+                successCallback(data);
             }
         })
         .catch(err => console.log(err));
@@ -70,7 +71,7 @@ export const updateDestination = (id, destination, successCallback) => {
         //     // "Content-Type": "application/json",
         // },
         method: "PUT",
-        body: JSON.stringify(task)
+        body: JSON.stringify({})
     })
         .then(r => r.json())
         .then(data => {

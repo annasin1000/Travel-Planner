@@ -27,7 +27,7 @@ function App() {
 
     return (
         <>
-            <NewDestination onNewDestination={handleAddNewDestination}/>
+            <h1>hej</h1>
             {destinations.map(destinations => {
                 return <Destination key ={destinations.id} {...destinations} onRemoveDestination={handleRemoveDestination}/>;
             })}
@@ -37,7 +37,7 @@ function App() {
 }
 export default App;
 
-ReactDOM.render(<App/>, document.querySelector("#app"));
+ReactDOM.render(<App/>, document.querySelector("#root"));
 //     <div className="App">
 //         <header className="App-header">
 //             {/*<img src={logo} className="App-logo" alt="logo" />*/}
